@@ -1,0 +1,17 @@
+.mdv-drop {
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: var(--mdv-fg);
+  font: 600 20px var(--mdv-sans, sans-serif);
+  background: color-mix(in srgb, var(--mdv-bg) 85%, transparent);
+  border: 3px dashed var(--mdv-accent);
+  pointer-events: none;
+}
+
+.mdv-dragging .mdv-drop {
+  display: flex;
+}

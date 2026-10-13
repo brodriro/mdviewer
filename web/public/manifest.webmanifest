@@ -1,0 +1,19 @@
+{
+  "name": "MD Viewer",
+  "short_name": "MD Viewer",
+  "description": "Lector de archivos Markdown",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0969da",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ],
+  "file_handlers": [
+    { "action": "./", "accept": { "text/markdown": [".md", ".markdown"] } }
+  ]
+}

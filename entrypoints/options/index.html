@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="manifest.open_in_tab" content="true" />
+    <title>Opciones de MD Viewer</title>
+  </head>
+  <body>
+    <main>
+      <h1>MD Viewer</h1>
+      <p class="muted">Los cambios se guardan solos y se aplican a las pestañas abiertas.</p>
+
+      <form id="form">
+        <h2>Apariencia</h2>
+        <label class="row">
+          <span>Tema</span>
+          <select name="theme">
+            <option value="auto">Según el sistema</option>
+            <option value="light">Claro</option>
+            <option value="dark">Oscuro</option>
+          </select>
+        </label>
+        <label class="row">
+          <span>Ancho de lectura</span>
+          <select name="width">
+            <option value="narrow">Estrecho</option>
+            <option value="medium">Medio</option>
+            <option value="wide">Ancho</option>
+            <option value="full">Completo</option>
+          </select>
+        </label>
+        <label class="row">
+          <span>Tipografía</span>
+          <select name="font">
+            <option value="sans">Sans serif</option>
+            <option value="serif">Serif</option>
+            <option value="mono">Monoespaciada</option>
+          </select>
+        </label>
+        <label class="row">
+          <span>Tamaño de letra (px)</span>
+          <input type="number" name="fontSize" min="12" max="24" step="1" />
+        </label>
+        <label class="row">
+          <span>Mostrar el índice al abrir</span>
+          <input type="checkbox" name="showToc" />
+        </label>
+
+        <h2>Contenido</h2>
+        <label class="row">
+          <span>Fórmulas con KaTeX<small>Interpreta <code>$…$</code> y <code>$$…$$</code>.</small></span>
+          <input type="checkbox" name="math" />
+        </label>
+        <label class="row">
+          <span>Diagramas Mermaid</span>
+          <input type="checkbox" name="mermaid" />
+        </label>
+        <label class="row">
+          <span>
+            Recarga automática
+            <small>Actualiza la vista al guardar archivos locales o servidos desde localhost.</small>
+          </span>
+          <input type="checkbox" name="autoReload" />
+        </label>
+
+        <h2>Sitios excluidos</h2>
+        <p class="muted">Un dominio por línea. En ellos el archivo se muestra como texto sin procesar.</p>
+        <textarea name="excluded" spellcheck="false" aria-label="Sitios excluidos" placeholder="ejemplo.com"></textarea>
+      </form>
+
+      <h2>Archivos locales</h2>
+      <div class="status" id="file-access" role="status"></div>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

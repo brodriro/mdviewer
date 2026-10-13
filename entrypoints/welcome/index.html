@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MD Viewer está instalado</title>
+  </head>
+  <body>
+    <main>
+      <h1>MD Viewer está instalado</h1>
+      <p class="muted">
+        Cualquier dirección que termine en <code>.md</code> o <code>.markdown</code> y devuelva texto se muestra ya
+        con formato.
+      </p>
+
+      <h2>Falta un paso para los archivos de tu disco</h2>
+      <div class="status" id="file-access" role="status"></div>
+      <ol id="steps">
+        <li>Pulsa el botón de arriba para abrir los ajustes de la extensión.</li>
+        <li>Activa <strong>Permitir acceso a URL de archivo</strong>.</li>
+        <li>Vuelve a esta pestaña: el aviso cambia solo cuando el permiso está activo.</li>
+      </ol>
+
+      <h2>Qué puedes hacer</h2>
+      <ol>
+        <li>Navegar por el documento con el índice lateral.</li>
+        <li>Cambiar tema, ancho y tipografía desde la barra superior o en las opciones.</li>
+        <li>Editar un archivo local y ver los cambios sin recargar.</li>
+        <li>Imprimir o guardar como PDF con un diseño limpio.</li>
+      </ol>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
